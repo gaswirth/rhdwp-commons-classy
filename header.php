@@ -60,16 +60,10 @@
 				<h1 class="invisible site-title"><?php bloginfo( 'name' ); ?></h1>
 
 				<div class="title-group">
-					<a href="<?php echo home_url(); ?>"><img id="site-title" src="<?php echo RHD_IMG_DIR; ?>/logo.png" alt="Michael Korie"></a>
+					<a href="<?php echo home_url(); ?>"><img id="site-title" src="<?php echo RHD_IMG_DIR; ?>/logo.png" alt="SITE LOGO"></a>
 					<h3 id="site-description"><?php bloginfo( 'description' ); ?></h3>
 				</div>
 
-<!--
-				<a id="hamburger" class="sb-toggle-right">
-					<img src="<?php echo RHD_IMG_DIR; ?>/burger.png" alt="Navigation">
-				</a>
--->
-				
 				<button id="hamburger" class="sb-toggle-right cmn-toggle-switch cmn-toggle-switch__htra">
 					<span>toggle menu</span>
 				</button>
