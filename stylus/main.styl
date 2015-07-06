@@ -1,0 +1,635 @@
+@require "partials/_global.styl"
+@require "partials/_fonts.styl"
+@require "partials/_helpers.styl"
+@require "partials/_galleries.styl"
+@require "partials/_defaults.styl"
+@require "partials/_hamburger.styl"
+
+/* ==========================================================================
+	Main Styles
+   ========================================================================== */
+
+html
+	width 100%
+	text-shadow 0 0 1px transparent
+	font-size 16px
+	font-fanwood()
+	color black
+	margin 0
+	background $dk-gray
+	line-height 1.5
+
+
+body
+	@extends html
+
+	&.admin-bar
+		#wpadminbar
+			position fixed
+			top 0
+
+
+a
+	outline 0 !important
+
+	&:link
+	&:visited
+		text-decoration none
+		color $peach
+
+	&:hover
+	&:active
+	&:focus
+		text-decoration underline
+
+
+h1
+h2
+h3
+h4
+h5
+h6
+	font-weight normal
+
+
+input
+textarea
+	background-color white
+	border none
+	box-sizing border-box
+	padding 0.5em
+	font-family inherit
+
+
+input[type="submit"]
+	cursor pointer
+	font normal 1.1em
+	-transition(all 0.35s)
+	padding 0.25em 1em
+	background-color $peach
+	border none
+	color $dk-gray
+	text-transform none
+	border-radius 0.1em
+
+	&:hover
+	&:active
+	&:focus
+		background-color $dk-peach
+
+
+#page
+#main
+	width 100%
+	color white
+	background-color inherit
+
+
+#masthead
+	width 100%
+	background $lt-gray
+	text-align center
+	clearfix()
+	position relative
+
+	.title-group
+		margin 1.5em auto 2em
+
+	#site-title
+		width 355px
+		max-width 100%
+		margin 0 auto
+
+
+	#site-description
+		font-julius()
+		margin 0
+
+	#hamburger
+		font-size 1.47rem
+		position relative
+		margin 1em auto 2em auto
+		cursor pointer
+		display block
+		-border-radius 0.2em
+		background-color transparent
+		
+		span
+			background-color $peach
+		
+			&::before
+			&::after
+				background-color @background-color
+
+
+#site-navigation-container
+	width 100%
+	text-align center
+
+
+#site-navigation
+	list-style none
+	padding 0 1em 0 0
+	margin 1.5em 0 0 0
+	text-align right
+	font-size 2em
+	font-julius()
+
+	li
+		a
+			text-decoration none
+			color $lt-gray
+			-transform(0.25s color ease)
+
+			&:hover
+			&:active
+			&:focus
+				color $dk-peach
+
+		.sub-menu
+			padding 0
+			font-size 0.6em
+			margin-top 0
+			font-fanwood()
+
+
+.sb-slidebar
+	background $peach
+	color white
+
+	a
+		color inherit
+
+
+#main
+	box-sizing border-box
+
+
+#primary
+	width 100%
+	position relative
+	box-sizing border-box
+
+
+#colophon
+	width 100%
+	font-julius()
+
+	.site-info
+		margin 0
+		padding 1em 0
+		text-align center
+		line-height 1.7
+		font-size 0.9em
+
+		a
+			text-decoration none
+
+			&:link
+			&:visited
+				color inherit
+
+			&:hover
+			&:active
+			&:focus
+				color $peach
+
+	#rhd-logo-footer
+		width 1.35em
+		height 1.35em
+		margin 0 0.05em
+		position relative
+		bottom 0.25em
+
+
+/* ==========================================================================
+	Posts & Pages
+   ========================================================================== */
+
+.page-title
+.entry-title
+	color $peach
+
+
+.page-title
+	margin-top 0
+	text-align center
+	font-julius()
+
+
+.entry-title
+	font-size 1.6em
+	margin 1em 0 0.75em
+	font-julius()
+	text-align center
+
+
+#content
+	width 100%
+	height 100%
+	wrapper 1em 1em
+
+	.type-post
+	.type-page
+		width 100%
+		height 100%
+		clearfix()
+		position relative
+
+
+.entry-content
+	width 100%
+
+	p
+		font-size 1.1em
+		margin 0.75em auto
+
+		&:first-child
+			margin-top 0
+
+		&:last-child
+			margin-bottom 0
+
+	h1
+	h2
+	h3
+	h4
+	h5
+	h6
+		line-height 1.1
+		color $peach
+
+	h2
+		font-julius()
+
+	ul
+		padding-left 1em
+
+	img
+		max-width 100%
+		height auto
+
+		&.alignleft
+			margin-right 1em
+
+		&.alignright
+			margin-left 1em
+
+		&.aligncenter
+			display block
+			margin 0 auto
+
+	.galleria
+		width 80%
+		margin 0 auto 1em auto
+
+
+.pagination
+.single-pagination
+	width 95%
+	margin 1em auto
+	font-size 1.1em
+	clearfix()
+
+	.pag-next
+	[rel="prev"]
+		float left
+
+	.pag-prev
+	[rel="next"]
+		float right
+
+
+/* ==========================================================================
+	Comments
+   ========================================================================== */
+
+#comments
+	margin 2em auto
+
+	.commentlist
+		list-style none
+		padding-left 0
+
+		ul
+		ol
+			@extends #comments .commentlist
+
+		.children
+			padding 0 1.5em
+
+	.even
+		background $off-white
+
+	.odd
+		background white
+
+	.comment-body
+		padding 1em
+		box-sizing border-box
+
+	textarea
+		max-width 100%
+
+	#commentform
+		width 100%
+		min-width 18rem
+
+		p
+			margin-bottom 0.75rem
+
+		input
+		textarea
+			width 100%
+			background-color $off-white
+			font-size 0.8em
+			border none
+			box-sizing border-box
+			padding 0.5em
+			display block
+
+		textarea
+			margin-top 1.7rem
+
+		#submit
+			width auto
+			padding-left 0.8em
+			cursor pointer
+
+
+/* ==========================================================================
+	Widget Areas & Sidebars
+   ========================================================================== */
+
+#secondary
+	.widget
+		width 100%
+		margin-bottom 1.5em
+
+	.widget:last-child
+		margin-bottom 0
+
+
+	.widget-title
+		margin-top 0
+
+
+/* ==========================================================================
+	Front Page
+   ========================================================================== */
+
+.front-page
+	#content
+		unwrapper()
+
+		.entry-content
+			width 100%
+
+			img
+				width 100%
+
+
+/* ==========================================================================
+	About Page
+   ========================================================================== */
+
+.page-id-317
+	#content
+		unwrapper()
+		clearfix()
+
+		#about-image
+			width 100%
+			height 100vh
+			background-size cover
+			background-position center center
+
+		#about-content
+			wrapper 1.5em 2em
+
+			.entry-content
+				font-size 1em
+
+
+/* ==========================================================================
+	Contact Page
+   ========================================================================== */
+
+.page-id-321
+	.contact-form
+		margin 1em auto
+
+		input
+		textarea
+			font-fanwood()
+
+		textarea
+			width 100%
+
+
+/* ==========================================================================
+	Store + Calendar (shared styles)
+   ========================================================================== */
+
+.type-post
+.type-rhd_product
+	width 100%
+	position relative
+	padding 2em 0
+	border-top none
+	border none
+
+	.entry-title
+	.entry-content
+		text-align center
+
+	.entry-title
+		font-size 1.4em
+		margin-bottom 0.5em
+
+	.entry-content
+		font-size 1em
+		clearfix()
+
+	.entry-thumbnail
+		width 75%
+		height auto
+		display block
+		margin 0 auto 0.5em auto
+		border-radius 0.1em
+
+		img
+			width 100%
+			height auto
+
+	.rhd_post_meta
+		width auto
+		display block
+		position relative
+		text-align center
+		margin 1em auto
+
+	.rhd_ext_link
+		background-color $peach
+		background-image none
+		border none
+		border-radius 0.1em
+		font-size 1.1em
+		padding 0.25em 1em
+		-transition(all 0.35s)
+
+		&:link
+		&:visited
+			color $dk-gray
+
+		&:hover
+		&:active
+		&:focus
+			background-color $dk-peach
+			color $dk-gray
+			text-decoration none
+
+
+/* ==========================================================================
+	Media Queries
+   ========================================================================== */
+
+@media screen and (min-width 40em)
+	#masthead
+		#hamburger
+			position absolute
+			top 50%
+			right 4%
+			-transform(translateY(-50%))
+			margin 0
+
+
+	.entry-content
+		.galleria
+			width 65%
+			float right
+			margin-left 4em
+			margin-bottom 2em
+
+
+	#comments
+		#commentform
+			width 75%
+
+			p
+				margin-bottom 0.75rem
+
+			input
+			textarea
+				font-size 0.8em
+				border none
+				box-sizing border-box
+				padding 0.5em
+				display block
+
+			input
+				&[type="text"]
+				&[type="email"]
+					width 75%
+
+			textarea
+				margin-top 1.7rem
+
+			#submit
+				width auto
+				padding-left 0.8em
+
+
+	.type-post
+	.type-rhd_product
+		clearfix()
+		display table
+
+		.entry-content-container
+			display table-cell
+			vertical-align middle
+
+		.entry-title
+		.entry-content
+			text-align left
+
+		.entry-title
+			margin-bottom 0
+
+		.entry-content
+		.entry-thumbnail
+			display table-cell
+			vertical-align middle
+
+		.entry-content
+			font-size 1.1em
+
+		.entry-thumbnail
+			width 15.625em
+			padding-right 2em
+			box-sizing content-box
+
+		.rhd_post_meta
+			margin 1em auto 0
+			text-align right
+
+		.rhd_ext_link
+			background-color $peach
+			background-image none
+			border none
+			-border-radius 0.1em
+			font-size 1.1em
+			padding 0.25em 1em
+			-transition(all 0.35s)
+
+			&:link
+			&:visited
+				color $dk-gray
+
+			&:hover
+			&:active
+			&:focus
+				background-color $dk-peach
+				color $dk-gray
+				text-decoration none
+
+
+	.page-id-317
+		#content
+			unwrapper()
+			clearfix()
+
+			#about-content-container
+				height auto
+				position relative
+				clearfix()
+
+			#about-image
+				width 40%
+				height 100%
+				position absolute
+				top 0
+				left 0
+				display block
+
+			#about-content
+				width 58%
+				float right
+				padding 2em 3em 2em 1em
+
+				.entry-content
+					text-align left
+
+
+	.page-id-321
+		.contact-form
+			width 80%
+			margin 0 auto
+
+
+/* ==========================================================================
+	Extras
+   ========================================================================== */
+
+.no-margin
+	margin 0

@@ -1,0 +1,13 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Roundhouse Designs —- Designers + Hosting -- @roundhouseguys
+    Nick Gaswirth -- Programmer + Webmaster -- @nickgaswirth
+    Ryan Foy -- Designer + Direction -- @ryanfoy
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, PHP
+    jQuery, Modernizr

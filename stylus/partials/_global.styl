@@ -1,0 +1,129 @@
+/* ==========================================================================
+	Global Stylus Variables
+   ========================================================================== */
+
+// Variables
+$dk-gray = #1c1c1a
+$lt-gray = #353736
+$peach = #ffcfa9
+$dk-peach = #d1aa8a
+
+
+// Classes
+
+.unselectable
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	-o-user-select: none;
+	user-select: none;
+
+
+.invisible
+	visibility hidden
+	position absolute
+
+
+// Functions
+
+
+font-fanwood()
+	font-family "Fanwood Text", serif
+
+
+font-julius()
+	font-family "Julius Sans One", sans-serif
+
+
+flexbox()
+	text-align justify
+
+	&:after
+		width 100%
+		display inline-block
+		content ''
+
+flexitem()
+	display inline-block
+
+
+wrapper( $topMargin = false, $bottomMargin = false, $customWidth = false )
+	if $customWidth == false
+		$w = 85%
+	else
+		$w = $customWidth
+
+	if $topMargin == false
+		$topMargin = 0
+	if $bottomMargin == false
+		$bottomMargin = 0
+
+	width $w
+	max-width 64em
+	position relative
+	margin $topMargin auto $bottomMargin auto
+
+
+unwrapper()
+	width 100%
+	max-width none
+	margin initial
+
+
+clearfix()
+	@extends .clearfix
+
+
+body-shadow( $yPos )
+	box-shadow 0em $yPos 0.45em 0em rgba(0,0,0,0.5)
+
+
+placeholder-props( $famVal, $color)
+	&::-webkit-input-placeholder
+		font-family $famVal
+		color $color
+	&:-moz-placeholder /* Firefox 18- */
+		font-family $famVal
+		color $color
+	&::-moz-placeholder  /* Firefox 19+ */
+		font-family $famVal
+		color $color
+	&:-ms-input-placeholder
+		font-family $famVal
+		color $color
+
+
+/* flexbox( $mode = space-between )
+	-ms-box-orient: horizontal;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: $mode
+	justify-content: $mode
+*/
+
+
+-opacity( $n )
+	-moz-opacity $n
+	-webkit-opacity $n
+	opacity $n
+
+
+-border-radius( $n )
+	-webkit-border-radius $n
+	-moz-border-radius $n
+	border-radius $n
+
+
+-transform( $n )
+	-webkit-transform $n
+	transform $n
+
+
+-transition( $n )
+	-webkit-transition $n
+	-moz-transition $n
+	transition $n
