@@ -89,7 +89,7 @@ input[type="submit"]
 	width 100%
 	background $lt-gray
 	text-align center
-	clearfix()
+	-clearfix()
 	position relative
 
 	.title-group
@@ -113,10 +113,10 @@ input[type="submit"]
 		display block
 		-border-radius 0.2em
 		background-color transparent
-		
+
 		span
 			background-color $peach
-		
+
 			&::before
 			&::after
 				background-color @background-color
@@ -227,13 +227,13 @@ input[type="submit"]
 #content
 	width 100%
 	height 100%
-	wrapper 1em 1em
+	-wrapper(1em, 1em)
 
 	.type-post
 	.type-page
 		width 100%
 		height 100%
-		clearfix()
+		-clearfix()
 		position relative
 
 
@@ -289,7 +289,7 @@ input[type="submit"]
 	width 95%
 	margin 1em auto
 	font-size 1.1em
-	clearfix()
+	-clearfix()
 
 	.pag-next
 	[rel="prev"]
@@ -380,7 +380,7 @@ input[type="submit"]
 
 .front-page
 	#content
-		unwrapper()
+		-unwrapper()
 
 		.entry-content
 			width 100%
@@ -395,8 +395,8 @@ input[type="submit"]
 
 .page-id-317
 	#content
-		unwrapper()
-		clearfix()
+		-unwrapper()
+		-clearfix()
 
 		#about-image
 			width 100%
@@ -405,7 +405,7 @@ input[type="submit"]
 			background-position center center
 
 		#about-content
-			wrapper 1.5em 2em
+			-wrapper(1.5em, 2em)
 
 			.entry-content
 				font-size 1em
@@ -449,7 +449,7 @@ input[type="submit"]
 
 	.entry-content
 		font-size 1em
-		clearfix()
+		-clearfix()
 
 	.entry-thumbnail
 		width 75%
@@ -542,7 +542,7 @@ input[type="submit"]
 
 	.type-post
 	.type-rhd_product
-		clearfix()
+		-clearfix()
 		display table
 
 		.entry-content-container
@@ -596,13 +596,13 @@ input[type="submit"]
 
 	.page-id-317
 		#content
-			unwrapper()
-			clearfix()
+			-unwrapper()
+			-clearfix()
 
 			#about-content-container
 				height auto
 				position relative
-				clearfix()
+				-clearfix()
 
 			#about-image
 				width 40%
