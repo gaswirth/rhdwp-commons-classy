@@ -9,7 +9,7 @@ $color2-light = #5a99b0
 
 // Classes
 
--unselectable()
+.unselectable
 	-webkit-user-select none /* Chrome/Safari */
 	-moz-user-select none /* Firefox */
 	-ms-user-select none /* IE10+ */
@@ -17,11 +17,13 @@ $color2-light = #5a99b0
 	user-select none
 
 
--invisible()
+.invisible
 	position absolute
 	visibility hidden
 	margin 0
 
+
+// Functions
 
 -clearfix()
 	&:before
@@ -49,11 +51,7 @@ $color2-light = #5a99b0
 
 
 -ff_body()
-	font-family 'Muli', sans-serif
-
--ff_special()
-	font-family 'Cinzel', serif
-	font-weight normal
+	font-family 'Oswald', sans-serif
 
 
 -opacity( $val )
