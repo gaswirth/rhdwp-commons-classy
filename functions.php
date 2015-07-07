@@ -85,7 +85,7 @@ function rhd_enqueue_scripts() {
 		'ajax_url' => admin_url( 'admin-ajax.php' ),
 		'query_vars' => json_encode( $wp_query->query ),
 	);
-	wp_localize_script( 'rhd-plugins', 'wp_data', $data);
+	wp_localize_script( 'rhd-main', 'wp_data', $data);
 
 }
 add_action('wp_enqueue_scripts', 'rhd_enqueue_scripts');
