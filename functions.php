@@ -1,6 +1,6 @@
 <?php
 /**
- * RHD Base
+ * Classy
  *
  * ROUNDHOUSE DESIGNS
  *
@@ -34,7 +34,6 @@ function rhd_enqueue_styles(){
 	wp_register_style( 'rhd-main', RHD_THEME_DIR . '/css/main.css', array(), '1', 'all' );
 	wp_register_style( 'rhd-enhanced', RHD_THEME_DIR . '/css/enhanced.css', array(), '1', 'all' );
 	wp_register_style( 'Slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.css', array(), null, 'all' );
-	wp_register_style( 'google-fonts', '//fonts.googleapis.com/css?family=Fanwood+Text|Julius+Sans+One' );
 
 	$normalize_deps = array(
 		// Slidebars,
@@ -50,7 +49,6 @@ function rhd_enqueue_styles(){
 
 	wp_enqueue_style( 'rhd-main' );
 	wp_enqueue_style( 'normalize' );
-	wp_enqueue_style( 'google-fonts' );
 }
 add_action( 'wp_enqueue_scripts', 'rhd_enqueue_styles' );
 
@@ -105,18 +103,6 @@ function rhd_register_jquery() {
 	wp_enqueue_script( 'jquery' );
 }
 add_action( 'wp_enqueuescripts', 'rhd_register_jquery' );
-
-function rhd_add_editor_styles() {
-	//Google Fonts in admin editor
-	$font_url = '//fonts.googleapis.com/css?family=Fanwood+Text|Julius+Sans+One';
-	$font_url = str_replace( ',', '%2C', $font_url );
-	$font_url = str_replace( ':', '%3A', $font_url );
-    add_editor_style( $font_url );
-
-
-	add_editor_style( RHD_THEME_DIR . '/css/editor.css' );
-}
-add_action( 'after_setup_theme', 'rhd_add_editor_styles' );
 
 
 /**
