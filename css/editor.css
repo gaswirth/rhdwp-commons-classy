@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 6:40:45 PM on 08-07-2015
+* RHD Dev: Compiled at 7:58:52 PM on 08-07-2015
 ***/
 
 /**
@@ -700,10 +700,10 @@ body.admin-bar #wpadminbar {
 }
 a {
   outline: 0 !important;
+  text-decoration: none;
 }
 a:link,
 a:visited {
-  text-decoration: none;
   color: $peach;
 }
 a:hover,
