@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 6:10:14 PM on 07-07-2015
+* RHD Dev: Compiled at 6:40:45 PM on 08-07-2015
 ***/
 
 /**
@@ -766,7 +766,6 @@ input[type="submit"]:focus {
   margin: 1.5em auto 2em;
 }
 #masthead #site-title {
-  width: 355px;
   max-width: 100%;
   margin: 0 auto;
 }
