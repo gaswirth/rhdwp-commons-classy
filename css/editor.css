@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 8:01:44 PM on 08-07-2015
+* RHD Dev: Compiled at 9:15:53 PM on 08-07-2015
 ***/
 
 /**
@@ -1031,6 +1031,7 @@ input[type="submit"]:focus {
 }
 .page-id-317 #content {
   width: 100%;
+  max-width: none;
 }
 .page-id-317 #content:before,
 .page-id-317 #content:after {
@@ -1256,6 +1257,7 @@ input[type="submit"]:focus {
   }
   .page-id-317 #content {
     width: 100%;
+    max-width: none;
   }
   .page-id-317 #content:before,
   .page-id-317 #content:after {
