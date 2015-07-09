@@ -160,6 +160,10 @@ input[type="submit"]
 		color inherit
 
 
+#page
+	padding-bottom $footer-ht
+
+
 #main
 	box-sizing border-box
 
@@ -172,13 +176,17 @@ input[type="submit"]
 
 #colophon
 	width 100%
+	height $footer-ht
 	position absolute
 	bottom 0
 	left 0
 
 	.site-info
-		margin 0
-		padding 1em 0
+		width 100%
+		position absolute
+		top 50%
+		left 0
+		-transform(translateY(-50%))
 		text-align center
 		line-height 1.7
 		font-size 0.9em
