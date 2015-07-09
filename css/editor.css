@@ -1,5 +1,5 @@
 /***
-* RHD Dev: Compiled at 9:22:23 PM on 08-07-2015
+* RHD Dev: Compiled at 7:11:38 PM on 09-07-2015
 ***/
 
 /**
@@ -836,6 +836,9 @@ input[type="submit"]:focus {
 }
 #colophon {
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 #colophon .site-info {
   margin: 0;
