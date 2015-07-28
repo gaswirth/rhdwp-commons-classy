@@ -31,6 +31,10 @@
 			$body_classes[] = ( wp_is_mobile() && !rhd_is_mobile() ) ? 'tablet' : '';
 			$body_classes[] = ( !wp_is_mobile() && !rhd_is_mobile() ) ? 'desktop' : '';
 			$body_classes[] = ( is_home() || is_single() || is_archive() || is_search() ) ? 'blog-area' : '';
+
+			// Blog name
+			$blog_details = get_blog_details( get_current_blog_id() );
+			$body_classes[] = substr( $blog_details->path, 1, -1);
 		?>
 
 		<?php wp_head(); ?>
