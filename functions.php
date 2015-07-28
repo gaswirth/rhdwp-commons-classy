@@ -31,12 +31,13 @@ define( 'DISALLOW_FILE_EDIT', true );
 function rhd_enqueue_styles(){
 	global $theme_opts;
 
+	wp_register_style( 'rhd-sitewide', content_url() . '/global/sitewide.css', array(), '1', 'all' );
 	wp_register_style( 'rhd-main', RHD_THEME_DIR . '/css/main.css', array(), '1', 'all' );
 	wp_register_style( 'rhd-enhanced', RHD_THEME_DIR . '/css/enhanced.css', array(), '1', 'all' );
-	wp_register_style( 'Slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.css', array(), null, 'all' );
+	//wp_register_style( 'Slidebars', RHD_THEME_DIR . '/js/vendor/Slidebars/dist/slidebars.min.css', array(), null, 'all' );
 
 	$normalize_deps = array(
-		// Slidebars,
+		'Slidebars',
 	);
 
 	wp_enqueue_style( 'Slidebars' );
@@ -48,6 +49,7 @@ function rhd_enqueue_styles(){
 	wp_register_style( 'normalize', RHD_THEME_DIR . '/css/normalize.css', $normalize_deps, null, 'all' );
 
 	wp_enqueue_style( 'rhd-main' );
+	wp_enqueue_style( 'rhd-sitewide' );
 	wp_enqueue_style( 'normalize' );
 }
 add_action( 'wp_enqueue_scripts', 'rhd_enqueue_styles' );
